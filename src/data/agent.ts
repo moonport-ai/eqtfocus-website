@@ -3,7 +3,7 @@ export const AGENT_BIO = {
   title: "Licensed Real Estate Agent",
   brokerage: "EQT Focus",
   phone: "(973) 555-0123",
-  email: "ingrid@maisonluxuryrealty.com",
+  email: "Ingrid@creativesolutionsnj.co",
   address: "123 Main Street, Suite 200, Montclair, NJ 07042",
 
   bio: `Ingrid Jean-Gilles is a dedicated real estate professional with a passion for helping clients find their dream homes in New Jersey's most desirable communities. With over 10 years of experience navigating the luxury market in Essex, Union, and Bergen Counties, Ingrid brings an unmatched combination of market expertise, negotiation skill, and personalized service to every transaction.

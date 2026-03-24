@@ -84,7 +84,7 @@ export const AGENT_INFO = {
   title: "Licensed Real Estate Agent",
   brokerage: "EQT Focus",
   phone: "(973) 555-0123",
-  email: "ingrid@maisonluxuryrealty.com",
+  email: "Ingrid@creativesolutionsnj.co",
   address: "123 Main Street, Suite 200, Montclair, NJ 07042",
   officeAddress: "123 Main Street, Suite 200, Montclair, NJ 07042",
 } as const;

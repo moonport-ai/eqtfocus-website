@@ -12,18 +12,22 @@ export default function AgentContactCard({ propertyMls }: AgentContactCardProps)
 
   return (
     <div className="bg-white border border-brand-light-gray rounded-lg p-6 sticky top-28">
-      {/* Agent Photo Placeholder */}
-      <div className="w-20 h-20 rounded-full bg-white mx-auto flex items-center justify-center mb-4">
-        <span className="font-heading text-2xl text-brand-black">IJ</span>
+      {/* Agent info - hidden on mobile, shown on desktop */}
+      <div className="hidden md:block">
+        {/* Agent Photo Placeholder */}
+        <div className="w-20 h-20 rounded-full bg-white mx-auto flex items-center justify-center mb-4">
+          <span className="font-heading text-2xl text-brand-black">IJ</span>
+        </div>
+
+        <div className="text-center mb-6">
+          <h3 className="font-heading text-xl text-brand-dark-gray">{AGENT_INFO.name}</h3>
+          <p className="font-body text-sm text-brand-medium-gray mt-1">{AGENT_INFO.title}</p>
+          <p className="font-body text-xs text-brand-medium-gray mt-0.5">{AGENT_INFO.brokerage}</p>
+        </div>
+
+        <div className="w-12 h-px bg-brand-black mx-auto mb-6" />
       </div>
 
-      <div className="text-center mb-6">
-        <h3 className="font-heading text-xl text-brand-dark-gray">{AGENT_INFO.name}</h3>
-        <p className="font-body text-sm text-brand-medium-gray mt-1">{AGENT_INFO.title}</p>
-        <p className="font-body text-xs text-brand-medium-gray mt-0.5">{AGENT_INFO.brokerage}</p>
-      </div>
-
-      <div className="w-12 h-px bg-brand-black mx-auto mb-6" />
 
       <div className="space-y-3 mb-6">
         <a

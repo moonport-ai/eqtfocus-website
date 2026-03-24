@@ -8,6 +8,7 @@ import ListingFeatures from '@/components/listing/ListingFeatures';
 import ListingMap from '@/components/listing/ListingMap';
 import AgentContactCard from '@/components/listing/AgentContactCard';
 import MortgageCalculator from '@/components/listing/MortgageCalculator';
+import MobileCtaBar from '@/components/listing/MobileCtaBar';
 import SimilarListings from '@/components/listing/SimilarListings';
 import { formatPrice, formatAddress } from '@/lib/utils';
 import type { Listing } from '@/types/listing';
@@ -73,6 +74,7 @@ export default async function ListingDetailPage({ params }: Props) {
         <div className="flex flex-col lg:flex-row lg:gap-10">
           {/* Left Column - Main Content */}
           <div className="flex-1 min-w-0">
+            <MobileCtaBar propertyMls={listing.mlsNumber} />
             <ImageGallery
               images={listing.images || []}
               address={address}
