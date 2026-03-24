@@ -46,7 +46,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center gap-3">
         <span className="font-body text-[10px] tracking-[0.3em] uppercase text-white/70">
           Scroll to Explore
         </span>
