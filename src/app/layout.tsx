@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import Script from "next/script";
 import { Toaster } from "sonner";
 import { playfairDisplay, montserrat } from "@/lib/fonts";
 import { Header } from "@/components/layout/Header";
@@ -22,6 +23,21 @@ export default function RootLayout({
       lang="en"
       className={`${playfairDisplay.variable} ${montserrat.variable}`}
     >
+      <head>
+        <Script
+          src="https://kestrel.idxhome.com/ihf-kestrel.js"
+          strategy="beforeInteractive"
+        />
+        <Script id="ihf-kestrel-config" strategy="beforeInteractive">
+          {`
+            window.ihfKestrel = window.ihfKestrel || {};
+            ihfKestrel.config = {
+              platform: "custom",
+              activationToken: "7F6C5403-97E0-84B2-FD511CFC76A2E6CB",
+            };
+          `}
+        </Script>
+      </head>
       <body className="font-body text-brand-dark-gray bg-brand-white antialiased">
         <Suspense>
           <Header />
