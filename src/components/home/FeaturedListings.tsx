@@ -11,6 +11,7 @@ const GALLERY_SLIDER_CONFIG = {
   status: "active",
   featured: true,
   effect: "slide",
+  propertyType: "SFR,CND",
 };
 
 export function FeaturedListings() {
