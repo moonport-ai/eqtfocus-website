@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
-import { Container, Button } from "@/components/ui";
+import { Container } from "@/components/ui";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { AGENT_INFO } from "@/lib/constants";
 
@@ -120,9 +119,7 @@ export default function ContactPage() {
                 Fill out the form below and we&apos;ll get back to you as soon as
                 possible.
               </p>
-              <Suspense fallback={<div className="h-96" />}>
-                <ContactForm />
-              </Suspense>
+              <ContactForm />
             </div>
 
             {/* Contact Info Sidebar */}

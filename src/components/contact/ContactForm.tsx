@@ -3,7 +3,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import { useState } from "react";
 import { Input, Select, Button } from "@/components/ui";
@@ -14,7 +13,6 @@ const contactSchema = z.object({
   phone: z.string().optional(),
   subject: z.string().min(1, "Please select a subject"),
   message: z.string().min(10, "Message must be at least 10 characters"),
-  propertyMls: z.string().optional(),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -24,12 +22,9 @@ const subjectOptions = [
   { label: "Buying", value: "Buying" },
   { label: "Selling", value: "Selling" },
   { label: "Investing", value: "Investing" },
-  { label: "Property Question", value: "Property Question" },
 ];
 
 export function ContactForm() {
-  const searchParams = useSearchParams();
-  const propertyMls = searchParams.get("property") || "";
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const {
@@ -45,7 +40,6 @@ export function ContactForm() {
       phone: "",
       subject: "",
       message: "",
-      propertyMls: propertyMls,
     },
   });
 
@@ -136,11 +130,6 @@ export function ContactForm() {
           </p>
         )}
       </div>
-
-      {/* Hidden property MLS field */}
-      {propertyMls && (
-        <input type="hidden" {...register("propertyMls")} />
-      )}
 
       <Button
         type="submit"

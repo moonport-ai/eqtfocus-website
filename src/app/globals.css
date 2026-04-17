@@ -34,12 +34,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Leaflet container height fix */
-.leaflet-container {
-  height: 100%;
-  width: 100%;
-}
-
 @layer components {
   .section-heading-accent {
     position: relative;

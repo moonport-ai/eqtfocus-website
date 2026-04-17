@@ -24,10 +24,6 @@ export default function RootLayout({
       className={`${playfairDisplay.variable} ${montserrat.variable}`}
     >
       <head>
-        <Script
-          src="https://kestrel.idxhome.com/ihf-kestrel.js"
-          strategy="beforeInteractive"
-        />
         <Script id="ihf-kestrel-config" strategy="beforeInteractive">
           {`
             window.ihfKestrel = window.ihfKestrel || {};
@@ -37,6 +33,10 @@ export default function RootLayout({
             };
           `}
         </Script>
+        <Script
+          src="https://kestrel.idxhome.com/ihf-kestrel.js"
+          strategy="afterInteractive"
+        />
       </head>
       <body className="font-body text-brand-dark-gray bg-brand-white antialiased">
         <Suspense>
