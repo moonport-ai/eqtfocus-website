@@ -9,9 +9,9 @@ const GALLERY_SLIDER_CONFIG = {
   auto: true,
   maxResults: 6,
   status: "active",
-  featured: true,
+  featured: false,
   effect: "slide",
-  propertyType: "SFR,CND",
+  id: 2994845,
 };
 
 export function FeaturedListings() {
