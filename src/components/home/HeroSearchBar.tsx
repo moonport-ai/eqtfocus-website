@@ -40,7 +40,7 @@ export function HeroSearchBar() {
     const params = new URLSearchParams();
 
     if (location) {
-      params.set("area", location);
+      params.set("city", location);
     }
 
     if (priceRange) {
@@ -50,7 +50,7 @@ export function HeroSearchBar() {
     }
 
     if (bedrooms) {
-      params.set("minBedrooms", bedrooms);
+      params.set("bedrooms", bedrooms);
     }
 
     const queryString = params.toString();

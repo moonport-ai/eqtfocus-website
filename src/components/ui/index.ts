@@ -6,5 +6,4 @@ export { Badge } from "./Badge";
 export { Input } from "./Input";
 export { Select } from "./Select";
 export { Skeleton } from "./Skeleton";
-export { PriceDisplay } from "./PriceDisplay";
 export { ScrollToTop } from "./ScrollToTop";

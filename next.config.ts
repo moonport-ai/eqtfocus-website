@@ -8,14 +8,6 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**.repliers.io",
-      },
-      {
-        protocol: "https",
-        hostname: "cdn.repliers.io",
-      },
-      {
-        protocol: "https",
         hostname: "res.cloudinary.com",
       },
     ],

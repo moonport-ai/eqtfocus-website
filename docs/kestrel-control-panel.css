@@ -1,0 +1,78 @@
+/*
+ * iHomefinder Kestrel — brand bridge for the widget shadow DOM.
+ *
+ * Paste into: Control Panel → Setup → Website → CSS → "Add CSS to IDX Stylesheet"
+ *
+ * NOT imported by the Next.js build. Kestrel renders inside a shadow root,
+ * so the site's Tailwind classes cannot reach it; these rules map brand
+ * tokens onto Kestrel's .ui-* class names. After pasting, inspect the
+ * rendered widget in DevTools (look inside the shadow-root) and extend
+ * these rules to cover additional elements as needed.
+ *
+ * Brand tokens — keep in sync with src/app/globals.css:
+ *   #1A1A1A brand-dark-gray    #000000 brand-black    #FFFFFF brand-white
+ *   #6B6B6B brand-medium-gray  #E0E0E0 brand-light-gray
+ *   Playfair Display (headings)  Montserrat (body)
+ */
+
+:host,
+.ui-typography,
+.ui-grid {
+  font-family: "Montserrat", sans-serif;
+  color: #1A1A1A;
+}
+
+h1.ui-typography,
+h2.ui-typography,
+h3.ui-typography,
+h4.ui-typography,
+h5.ui-typography,
+h6.ui-typography {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  color: #1A1A1A;
+  letter-spacing: -0.01em;
+}
+
+.ui-button,
+button.ui-button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  border-radius: 0;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 1px solid #000000;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.ui-button:hover,
+button.ui-button:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.ui-button--secondary,
+button.ui-button--secondary {
+  background-color: #FFFFFF;
+  color: #1A1A1A;
+  border-color: #E0E0E0;
+}
+
+.ui-button--secondary:hover,
+button.ui-button--secondary:hover {
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+  border-color: #1A1A1A;
+}
+
+a {
+  color: #1A1A1A;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: #6B6B6B;
+}

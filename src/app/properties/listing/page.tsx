@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { KestrelWidget } from "@/components/kestrel/KestrelWidget";
 
 export const metadata: Metadata = {
-  title: "Properties | EQT Focus",
+  title: "Listing Details | EQT Focus",
   description:
-    "Browse luxury real estate listings in New Jersey. Filter by location, price, bedrooms, and more.",
+    "View detailed information about this luxury property, including photos, features, and neighborhood highlights.",
 };
 
-export default function PropertiesPage() {
+export default function ListingDetailsPage() {
   return (
     <section className="pt-24 pb-10 lg:pt-28 lg:pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
