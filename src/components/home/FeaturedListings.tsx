@@ -11,6 +11,7 @@ const GALLERY_SLIDER_CONFIG = {
   status: "active",
   featured: false,
   effect: "slide",
+  sort: "ds",
   id: 2994845,
 };
 
