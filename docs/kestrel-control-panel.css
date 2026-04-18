@@ -5,9 +5,7 @@
  *
  * NOT imported by the Next.js build. Kestrel renders inside a shadow root,
  * so the site's Tailwind classes cannot reach it; these rules map brand
- * tokens onto Kestrel's .ui-* class names. After pasting, inspect the
- * rendered widget in DevTools (look inside the shadow-root) and extend
- * these rules to cover additional elements as needed.
+ * tokens onto Kestrel's .ui-* class names.
  *
  * Brand tokens — keep in sync with src/app/globals.css:
  *   #1A1A1A brand-dark-gray    #000000 brand-black    #FFFFFF brand-white
@@ -65,6 +63,34 @@ button.ui-button--secondary:hover {
   background-color: #1A1A1A;
   color: #FFFFFF;
   border-color: #1A1A1A;
+}
+
+/* Without this, <p class="ui-typography"> inside a button stays #1A1A1A
+   and renders dark-on-dark when the button is the black (primary) variant. */
+.ui-button .ui-typography,
+button.ui-button .ui-typography {
+  color: inherit;
+}
+
+.schedule-tour-unselected-date .ui-button,
+.schedule-tour-unselected-date button.ui-button {
+  background-color: #FFFFFF;
+  color: #1A1A1A;
+  border: 1px solid #E0E0E0;
+}
+
+.schedule-tour-unselected-date .ui-button:hover,
+.schedule-tour-unselected-date button.ui-button:hover {
+  background-color: #F5F5F5;
+  color: #000000;
+  border-color: #1A1A1A;
+}
+
+.schedule-tour-selected-date .ui-button,
+.schedule-tour-selected-date button.ui-button {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 1px solid #000000;
 }
 
 a {
